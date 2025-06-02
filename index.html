@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Esmaltação Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF8F0;
+            color: #4A4A4A;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom-color 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #D98B8B;
+            border-bottom-color: #D98B8B;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+        .process-tab.active {
+            background-color: #FAEBEB;
+            border-left-color: #D98B8B;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        #mobile-menu.open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center space-x-3">
+                <img src="https://raw.githubusercontent.com/onjeck/imagens/main/logo.png" alt="Logótipo Raquel Cryss Nails Design" class="h-10 md:h-12">
+                <span class="text-2xl font-bold font-serif text-[#D98B8B] hidden sm:inline">Portfólio</span>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#biosseguranca" class="nav-link font-medium pb-1">Biossegurança</a>
+                <a href="#processo" class="nav-link font-medium pb-1">O Processo</a>
+                <a href="#dicas" class="nav-link font-medium pb-1">Dicas</a>
+                <a href="#galeria" class="nav-link font-medium pb-1">Galeria</a>
+                <a href="#contato" class="nav-link font-medium pb-1">Contato</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 p-2 rounded hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#D98B8B]">
+                <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                 <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
+            <div class="px-6 py-4 space-y-2">
+                <a href="#inicio" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">Início</a>
+                <a href="#biosseguranca" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">Biossegurança</a>
+                <a href="#processo" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">O Processo</a>
+                <a href="#dicas" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">Dicas</a>
+                <a href="#galeria" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">Galeria</a>
+                <a href="#contato" class="block py-2 text-center nav-link text-gray-700 hover:text-[#D98B8B]">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="min-h-screen flex items-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/FFF8F0/D98B8B?text=Esmaltação\nPerfeita');">
+            <div class="container mx-auto px-6 text-center bg-white/70 backdrop-blur-sm p-12 rounded-lg">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-4">A Arte da Esmaltação Perfeita</h1>
+                <p class="text-lg md:text-xl font-light max-w-2xl mx-auto">Bem-vinda a um espaço dedicado à beleza e ao cuidado, onde técnica, higiene e paixão se encontram para criar unhas impecáveis.</p>
+            </div>
+        </section>
+
+        <section id="biosseguranca" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-2">Nosso Compromisso com a Saúde</h2>
+                <p class="text-center text-lg mb-12 max-w-3xl mx-auto">A segurança e a saúde, tanto da profissional quanto da cliente, são a prioridade absoluta. Seguir as normas de biossegurança não é apenas uma exigência, mas um sinal de respeito e profissionalismo.</p>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="accordion-item border rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-semibold">🛡️ Esterilização e Limpeza de Materiais</span>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t">
+                                <h3 class="font-bold mb-2">Autoclave:</h3>
+                                <p class="mb-2">Todos os instrumentos metálicos (alicates, espátulas) são esterilizados em autoclave após cada uso, o método mais eficaz para eliminar todos os microrganismos.</p>
+                                <img src="https://raw.githubusercontent.com/onjeck/imagens/main/autoclave.jpeg" alt="Autoclave profissional" class="w-full max-w-md mx-auto rounded-md my-4">
+                                <h3 class="font-bold mb-2">Limpeza Prévia:</h3>
+                                <p>Antes da esterilização, os materiais são lavados com água e sabão/detergente enzimático para remover resíduos visíveis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-semibold">✨ Materiais Descartáveis</span>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t">
+                                <p class="mb-2">Utilizamos sempre materiais descartáveis para cada cliente: lixas, palitos, protetores de bacia, luvas, máscaras e toalhas de papel. O descarte é feito corretamente após o uso.</p>
+                                <img src="https://raw.githubusercontent.com/onjeck/imagens/main/kit_descartavel.jpeg" alt="Kit individual descartável" class="w-full max-w-md mx-auto rounded-md my-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border rounded-lg overflow-hidden">
+                        <button class="accordion-header w-full flex justify-between items-center p-5 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                            <span class="text-lg font-semibold">👩‍🔬 Higiene Pessoal e do Ambiente</span>
+                            <span class="transform transition-transform duration-300">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t">
+                                <h3 class="font-bold mb-2">Higiene da Profissional:</h3>
+                                <ul class="list-disc list-inside space-y-1 mb-4">
+                                    <li>Lavagem de mãos com sabão antisséptico.</li>
+                                    <li>Uso de Equipamento de Proteção Individual (EPI).</li>
+                                    <li>Jaleco e unhas sempre limpos.</li>
+                                </ul>
+                                <h3 class="font-bold mb-2">Higiene do Ambiente:</h3>
+                                <p>Todas as superfícies de trabalho são higienizadas com álcool 70% ou desinfetante apropriado entre cada atendimento, garantindo um local limpo e seguro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="processo" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-2">O Processo de Esmaltação Perfeita</h2>
+                <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Uma esmaltação de qualidade envolve técnica, paciência e os produtos certos. Explore nosso processo passo a passo para um acabamento impecável.</p>
+                <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+                    <div id="process-tabs-container" class="flex md:flex-col gap-2 md:w-1/3">
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300 active" data-step="1"><strong>Passo 1:</strong> Preparação</button>
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300" data-step="2"><strong>Passo 2:</strong> Base</button>
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300" data-step="3"><strong>Passo 3:</strong> Esmaltação</button>
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300" data-step="4"><strong>Passo 4:</strong> Limpeza</button>
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300" data-step="5"><strong>Passo 5:</strong> Top Coat</button>
+                        <button class="process-tab text-left p-4 rounded-lg border-l-4 transition-all duration-300" data-step="6"><strong>Passo 6:</strong> Finalização</button>
+                    </div>
+                    <div id="process-content-container" class="md:w-2/3">
+                        <div class="process-content active" data-step="1">
+                            <h3 class="text-2xl font-bold mb-4">Preparação da Unha</h3>
+                            <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=1.+Preparação" alt="Preparação da unha" class="rounded-lg mb-4 w-full">
+                            <p>Removemos o esmalte anterior, lixamos as unhas no formato desejado e cuidamos das cutículas com suavidade. A unha é limpa para remover toda a oleosidade, garantindo a aderência perfeita dos produtos.</p>
+                        </div>
+                        <div class="process-content hidden" data-step="2">
+                            <h3 class="text-2xl font-bold mb-4">Aplicação da Base</h3>
+                            <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=2.+Base" alt="Aplicação da base" class="rounded-lg mb-4 w-full">
+                            <p>Aplicamos uma camada fina de base de alta qualidade. Ela protege a unha, evita manchas e aumenta a durabilidade do esmalte, além de poder tratar especificidades como unhas fracas.</p>
+                        </div>
+                        <div class="process-content hidden" data-step="3">
+                            <h3 class="text-2xl font-bold mb-4">Esmaltação (Cor)</h3>
+                            <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=3.+Esmaltação" alt="Esmaltação" class="rounded-lg mb-4 w-full">
+                            <p>Com camadas finas e precisas, aplicamos a cor escolhida. A técnica correta garante uma cobertura uniforme, secagem rápida e evita a formação de bolhas, resultando em uma cor vibrante e sólida.</p>
+                        </div>
+                        <div class="process-content hidden" data-step="4">
+                             <h3 class="text-2xl font-bold mb-4">Palitação e Limpeza</h3>
+                             <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=4.+Limpeza" alt="Limpeza dos cantos" class="rounded-lg mb-4 w-full">
+                            <p>Este é o segredo do acabamento perfeito. Com um palito, limpamos cuidadosamente qualquer excesso de esmalte ao redor da cutícula, garantindo um contorno limpo e profissional.</p>
+                        </div>
+                        <div class="process-content hidden" data-step="5">
+                            <h3 class="text-2xl font-bold mb-4">Aplicação do Top Coat</h3>
+                            <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=5.+Top+Coat" alt="Aplicação do Top Coat" class="rounded-lg mb-4 w-full">
+                            <p>Uma camada de finalizador (top coat) é aplicada para proteger o esmalte, acelerar a secagem, intensificar o brilho e prolongar drasticamente a durabilidade da esmaltação.</p>
+                        </div>
+                        <div class="process-content hidden" data-step="6">
+                            <h3 class="text-2xl font-bold mb-4">Finalização</h3>
+                             <img src="https://placehold.co/600x400/FFF8F0/4A4A4A?text=6.+Finalização" alt="Finalização com óleo secante" class="rounded-lg mb-4 w-full">
+                            <p>Para terminar, aplicamos um óleo ou spray secante que hidrata as cutículas e protege o esmalte recém-feito, garantindo unhas perfeitas por mais tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dicas" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-2">Dicas Essenciais</h2>
+                <p class="text-center text-lg mb-12 max-w-3xl mx-auto">Siga estas dicas para manter sua esmaltação bonita e duradoura, cuidando da saúde das suas unhas.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Qualidade dos Produtos</h3>
+                        <p>Use sempre esmaltes, bases e finalizadores de boa qualidade. Eles fazem toda a diferença na durabilidade e na saúde das unhas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Unhas Saudáveis</h3>
+                        <p>A base de tudo! Mantenha as unhas e cutículas hidratadas. Unhas saudáveis seguram o esmalte por muito mais tempo.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Camadas Finas</h3>
+                        <p>O segredo para evitar bolhas e lascas. Camadas finas secam mais rápido e criam uma cobertura mais resistente.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Evite Água Quente</h3>
+                        <p>Nas primeiras horas, evite contato prolongado com água quente. Isso pode amolecer o esmalte e comprometer a secagem.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Manutenção com Top Coat</h3>
+                        <p>Reaplicar uma camada de top coat a cada 2 ou 3 dias ajuda a renovar o brilho e proteger a esmaltação contra lascas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-2">Remoção Correta</h3>
+                        <p>Nunca arranque o esmalte! Use um removedor suave para não agredir ou enfraquecer a estrutura das suas unhas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Galeria de Inspiração</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/E57373/FFFFFF?text=Vermelho+Clássico" alt="Esmaltação vermelha" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/FFF176/4A4A4A?text=Nude+Elegante" alt="Esmaltação nude" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/81C784/FFFFFF?text=Cor+Vibrante" alt="Esmaltação vibrante" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/F06292/FFFFFF?text=Francesinha" alt="Esmaltação francesinha" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/9575CD/FFFFFF?text=Tons+Escuros" alt="Esmaltação escura" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/4FC3F7/FFFFFF?text=Candy+Color" alt="Esmaltação candy color" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/FFB74D/FFFFFF?text=Acabamento+Matte" alt="Esmaltação matte" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                    <div class="overflow-hidden rounded-lg group"><img src="https://placehold.co/400x500/BA68C8/FFFFFF?text=Detalhes" alt="Esmaltação com detalhes" class="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Entre em Contato</h2>
+            <div class="text-lg mb-6">
+                <p><strong>Raquel Cryss Nails Design/Curso Esmaltação Perfeita</strong></p>
+                <p>(19) 99596-9490</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://www.instagram.com/raquel_cryss/" target="_blank" rel="noopener noreferrer" class="text-xl hover:text-[#D98B8B] transition-colors flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    Instagram: @raquel_cryss
+                </a>
+                <a href="https://wa.me/5519996959490" target="_blank" rel="noopener noreferrer" class="text-xl hover:text-[#D98B8B] transition-colors flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.71 меньше такими-то символамиZ"/></svg>
+                    WhatsApp: (19) 99695-9490
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+
+            function toggleMenu() {
+                const isOpen = mobileMenu.classList.contains('open');
+                if (isOpen) {
+                    mobileMenu.classList.remove('open');
+                    menuIconOpen.classList.remove('hidden');
+                    menuIconClose.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.add('open');
+                    menuIconOpen.classList.add('hidden');
+                    menuIconClose.classList.remove('hidden');
+                }
+            }
+
+            if (mobileMenuButton && mobileMenu && menuIconOpen && menuIconClose) {
+                mobileMenuButton.addEventListener('click', toggleMenu);
+            }
+            
+            document.querySelectorAll('#mobile-menu a, header nav > div a').forEach(link => { 
+                link.addEventListener('click', (e) => { 
+                    if (mobileMenu && mobileMenu.classList.contains('open')) {
+                        toggleMenu(); // Close menu when a link is clicked
+                    }
+                });
+            });
+
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    if (!content) return;
+                    const icon = header.querySelector('span:last-child');
+                    
+                    const isOpening = !content.style.maxHeight || content.style.maxHeight === "0px";
+
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        if (c !== content) { 
+                           c.style.maxHeight = null;
+                           const otherIcon = c.previousElementSibling?.querySelector('span:last-child');
+                           if(otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    if (isOpening) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        if(icon) icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.style.maxHeight = null;
+                         if(icon) icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            const processTabs = document.querySelectorAll('.process-tab');
+            const processContents = document.querySelectorAll('.process-content');
+            processTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const step = tab.dataset.step;
+
+                    processTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+
+                    processContents.forEach(contentItem => { 
+                        if (contentItem.dataset.step === step) {
+                            contentItem.classList.remove('hidden');
+                        } else {
+                            contentItem.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            const sections = document.querySelectorAll('main section'); 
+            const navLinks = document.querySelectorAll('header nav a.nav-link, #mobile-menu a.nav-link');
+            
+            const headerElement = document.querySelector('header');
+            let rawHeaderHeight = headerElement ? headerElement.offsetHeight : 0;
+            let headerHNum = (typeof rawHeaderHeight === 'number' && isFinite(rawHeaderHeight)) ? rawHeaderHeight : 70;
+            if (isNaN(headerHNum) || headerHNum < 0) { 
+                headerHNum = 70;
+            }
+
+            let viewportHNum = (typeof window.innerHeight === 'number' && isFinite(window.innerHeight)) ? window.innerHeight : 600;
+            if (isNaN(viewportHNum) || viewportHNum <= 0) { 
+                viewportHNum = 600;
+            }
+
+            let bottomOffsetNum = viewportHNum - headerHNum - 150;
+            if (!isFinite(bottomOffsetNum) || isNaN(bottomOffsetNum) || bottomOffsetNum < 0) { 
+                bottomOffsetNum = viewportHNum * 0.3; 
+                if (isNaN(bottomOffsetNum) || bottomOffsetNum < 0) { 
+                    bottomOffsetNum = 180; 
+                }
+            }
+            
+            const finalHeaderH = Math.round(headerHNum);
+            const finalBottomOffset = Math.round(bottomOffsetNum);
+
+            const rootMarginStr = `-${finalHeaderH}px 0px -${finalBottomOffset}px 0px`;
+            
+            try {
+                const observerOptions = { 
+                    root: null, 
+                    rootMargin: rootMarginStr, 
+                    threshold: 0 
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    let currentActiveSectionId = null;
+                     entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            currentActiveSectionId = entry.target.id;
+                        }
+                    });
+                    
+                    if (!currentActiveSectionId) {
+                        let maxVisibleRatio = -1; 
+                        for (const section of sections) {
+                            if (!section.id || section.offsetHeight === 0) continue; 
+
+                            const rect = section.getBoundingClientRect();
+                            const visibleTop = Math.max(rect.top, finalHeaderH);
+                            const visibleBottom = Math.min(rect.bottom, viewportHNum);
+                            const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+                            const visibleRatio = visibleHeight / section.offsetHeight;
+
+                            if (visibleRatio > maxVisibleRatio) {
+                                maxVisibleRatio = visibleRatio;
+                                currentActiveSectionId = section.id;
+                            }
+                        }
+                    }
+
+                    navLinks.forEach(link => {
+                        const linkHref = link.getAttribute('href');
+                        if (linkHref) {
+                            link.classList.toggle('active', linkHref.substring(1) === currentActiveSectionId);
+                        }
+                    });
+                }, observerOptions);
+
+                sections.forEach(section => {
+                    if(section.id) { 
+                        observer.observe(section);
+                    }
+                });
+            } catch (e) {
+                console.error("Erro ao criar IntersectionObserver:", e, "Com rootMargin:", rootMarginStr);
+                navLinks.forEach(link => link.classList.remove('active')); 
+            }
+            
+            setTimeout(() => {
+                let currentHash = window.location.hash;
+                if (currentHash) {
+                    navLinks.forEach(link => {
+                        const linkHref = link.getAttribute('href');
+                        if (linkHref) {
+                           link.classList.toggle('active', linkHref === currentHash);
+                        }
+                    });
+                } else if (window.scrollY < 100) { 
+                     navLinks.forEach(link => {
+                         const linkHref = link.getAttribute('href');
+                         if (linkHref) {
+                            link.classList.toggle('active', linkHref === '#inicio');
+                         }
+                    });
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
